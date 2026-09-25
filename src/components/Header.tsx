@@ -16,7 +16,6 @@ interface Props {
   system: MeasurementSystem;
   onSystemToggle: () => void;
   savedCount: number;
-  onOpenPlayStoreGuide: () => void;
 }
 
 export const Header: React.FC<Props> = ({
@@ -25,7 +24,6 @@ export const Header: React.FC<Props> = ({
   system,
   onSystemToggle,
   savedCount,
-  onOpenPlayStoreGuide,
 }) => {
   const isFeet = system === 'imperial';
 
@@ -64,17 +62,6 @@ export const Header: React.FC<Props> = ({
             >
               <Ruler className="w-3.5 h-3.5 text-amber-400" />
               <span>{isFeet ? 'नाप: फीट (Ft)' : 'नाप: मीटर (M)'}</span>
-            </button>
-
-            {/* Play Store packaging info */}
-            <button
-              type="button"
-              onClick={onOpenPlayStoreGuide}
-              className="hidden sm:flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold transition"
-              title="प्ले स्टोर पर पब्लिश करें"
-            >
-              <Smartphone className="w-3.5 h-3.5" />
-              <span>Play Store</span>
             </button>
 
             {/* PWA Install */}

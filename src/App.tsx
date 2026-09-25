@@ -14,7 +14,6 @@ import { WallBlueprint } from './components/WallBlueprint';
 import { ResultsDisplay } from './components/ResultsDisplay';
 import { UnitConverter } from './components/UnitConverter';
 import { ProjectHistory } from './components/ProjectHistory';
-import { PlayStoreGuideModal } from './components/PlayStoreGuideModal';
 import { OfflineIndicator } from './components/OfflineIndicator';
 import { RotateCcw, HardHat } from 'lucide-react';
 
@@ -127,7 +126,6 @@ const INITIAL_INDIAN_SAVED_WALLS: SavedWallEstimate[] = [
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'calculator' | 'converter' | 'history'>('calculator');
-  const [showPlayStoreModal, setShowPlayStoreModal] = useState(false);
 
   // Load stored inputs or default
   const [input, setInput] = useState<IndianWallInput>(() => {
@@ -241,7 +239,6 @@ export default function App() {
         system={input.system}
         onSystemToggle={handleSystemToggle}
         savedCount={walls.length}
-        onOpenPlayStoreGuide={() => setShowPlayStoreModal(true)}
       />
 
       {/* Main Content */}
@@ -314,27 +311,14 @@ export default function App() {
             <span>•</span>
             <span>ईंट, सीमेंट व बालू कैलकुलेटर (भारतीय निर्माण मानक)</span>
           </div>
-          <div className="flex items-center gap-3 text-[11px]">
-            <span>100% ऑफलाइन चलने वाला</span>
-            <span>•</span>
-            <button
-              onClick={() => setShowPlayStoreModal(true)}
-              className="text-amber-400 hover:underline"
-            >
-              Play Store Guide
-            </button>
+          <div className="text-[11px] text-slate-400">
+            100% ऑफलाइन काम करने वाला ऐप
           </div>
         </div>
       </footer>
 
       {/* Offline Status */}
       <OfflineIndicator />
-
-      {/* Play Store Guide Modal */}
-      <PlayStoreGuideModal
-        isOpen={showPlayStoreModal}
-        onClose={() => setShowPlayStoreModal(false)}
-      />
     </div>
   );
 }
