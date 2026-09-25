@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="brick1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <linearGradient id="brick2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background with squircle safe padding -->
+  <rect width="512" height="512" rx="108" fill="url(#bg)"/>
+
+  <!-- Subtle Blueprint grid -->
+  <g stroke="#334155" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4">
+    <line x1="64" y1="0" x2="64" y2="512"/>
+    <line x1="128" y1="0" x2="128" y2="512"/>
+    <line x1="192" y1="0" x2="192" y2="512"/>
+    <line x1="256" y1="0" x2="256" y2="512"/>
+    <line x1="320" y1="0" x2="320" y2="512"/>
+    <line x1="384" y1="0" x2="384" y2="512"/>
+    <line x1="448" y1="0" x2="448" y2="512"/>
+    <line x1="0" y1="64" x2="512" y2="64"/>
+    <line x1="0" y1="128" x2="512" y2="128"/>
+    <line x1="0" y1="192" x2="512" y2="192"/>
+    <line x1="0" y1="256" x2="512" y2="256"/>
+    <line x1="0" y1="320" x2="512" y2="320"/>
+    <line x1="0" y1="384" x2="512" y2="384"/>
+    <line x1="0" y1="448" x2="512" y2="448"/>
+  </g>
+
+  <!-- Brick Wall Container / Frame -->
+  <rect x="76" y="112" width="360" height="268" rx="16" fill="#1e293b" stroke="#475569" stroke-width="4"/>
+
+  <!-- Row 1 -->
+  <rect x="88" y="124" width="162" height="52" rx="8" fill="url(#brick1)"/>
+  <rect x="262" y="124" width="162" height="52" rx="8" fill="url(#brick2)"/>
+
+  <!-- Row 2 (Staggered bond) -->
+  <rect x="88" y="186" width="76" height="52" rx="8" fill="url(#brick2)"/>
+  <rect x="174" y="186" width="164" height="52" rx="8" fill="url(#brick1)"/>
+  <rect x="348" y="186" width="76" height="52" rx="8" fill="url(#brick2)"/>
+
+  <!-- Row 3 -->
+  <rect x="88" y="248" width="162" height="52" rx="8" fill="url(#brick1)"/>
+  <rect x="262" y="248" width="162" height="52" rx="8" fill="url(#brick2)"/>
+
+  <!-- Row 4 (Staggered bond) -->
+  <rect x="88" y="310" width="76" height="52" rx="8" fill="url(#brick2)"/>
+  <rect x="174" y="310" width="164" height="52" rx="8" fill="url(#brick1)"/>
+  <rect x="348" y="310" width="76" height="52" rx="8" fill="url(#brick2)"/>
+
+  <!-- Engineering Caliper / Ruler Overlay -->
+  <g transform="translate(0, 20)">
+    <rect x="64" y="396" width="384" height="32" rx="8" fill="#0284c7" stroke="#38bdf8" stroke-width="3"/>
+    <!-- Ruler markings -->
+    <line x1="84" y1="400" x2="84" y2="420" stroke="#ffffff" stroke-width="3"/>
+    <line x1="114" y1="400" x2="114" y2="414" stroke="#ffffff" stroke-width="2"/>
+    <line x1="144" y1="400" x2="144" y2="420" stroke="#ffffff" stroke-width="3"/>
+    <line x1="174" y1="400" x2="174" y2="414" stroke="#ffffff" stroke-width="2"/>
+    <line x1="204" y1="400" x2="204" y2="420" stroke="#ffffff" stroke-width="3"/>
+    <line x1="234" y1="400" x2="234" y2="414" stroke="#ffffff" stroke-width="2"/>
+    <line x1="264" y1="400" x2="264" y2="420" stroke="#ffffff" stroke-width="3"/>
+    <line x1="294" y1="400" x2="294" y2="414" stroke="#ffffff" stroke-width="2"/>
+    <line x1="324" y1="400" x2="324" y2="420" stroke="#ffffff" stroke-width="3"/>
+    <line x1="354" y1="400" x2="354" y2="414" stroke="#ffffff" stroke-width="2"/>
+    <line x1="384" y1="400" x2="384" y2="420" stroke="#ffffff" stroke-width="3"/>
+    <line x1="414" y1="400" x2="414" y2="414" stroke="#ffffff" stroke-width="2"/>
+    <line x1="444" y1="400" x2="444" y2="420" stroke="#ffffff" stroke-width="3"/>
+  </g>
+
+  <!-- Digital Badge / Calc symbol in top corner -->
+  <circle cx="410" cy="100" r="32" fill="#22c55e" stroke="#ffffff" stroke-width="4"/>
+  <path d="M400 100 L408 108 L422 92" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "BrickCalc India - ईंट और सीमेंट कैलकुलेटर",
+  "description": "Simple brick, cement, sand (CFT/Trolley) and cost calculator for Indian house construction, civil engineers, contractors and mistris.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
